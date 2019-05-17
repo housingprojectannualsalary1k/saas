@@ -1,0 +1,12 @@
+[database]
+server = "127.0.0.1"
+port = 3306
+dbname = "07c"
+username = "root"
+password = "root"
+Charset = "utf8"
+
+[session]
+server = "127.0.0.1"
+port = 6379
+password = ""
