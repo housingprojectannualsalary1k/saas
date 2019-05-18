@@ -13,12 +13,6 @@ func NewOffLineStoreController() *OffLineStoreController{
 	return &o
 }
 
-func (this *OffLineStoreController) Copy() *OffLineStoreController{
-	cp := *this
-	cp.ctx = nil
-	return &cp
-}
-
 func (this *OffLineStoreController) View(ctx *gin.Context){
 	this.Response("你好啊")
 }

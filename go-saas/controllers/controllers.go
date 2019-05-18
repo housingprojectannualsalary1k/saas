@@ -3,7 +3,7 @@ package controllers
 import (
 	"crypto/md5"
 	"encoding/hex"
-	"gin_project/models"
+	"saas/go-saas/models"
 	"github.com/garyburd/redigo/redis"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"

@@ -27,7 +27,15 @@ func ResgiterRoute(){
 	offline_store := route.Group("/offline_store")
 	{
 		c := controllers.NewOffLineStoreController()
-		offline_store.GET("/view", c.Copy().View)
+		offline_store.GET("/view", c.View)
+	}
+
+	//客户管理
+	customer := route.Group("/customer")
+	{
+		c := controllers.NewCustomerController()
+		customer.GET("/view",c.View)
+		customer.POST("/create",c.Create)
 	}
 
 

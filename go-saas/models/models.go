@@ -22,6 +22,7 @@ type CommonModel struct {
 }
 
 func CreateTables(){
+	db.AutoMigrate(&CustomerModel{})
 }
 
 func Init(){
