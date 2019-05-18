@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"saas/controllers"
+	"saas/go-saas/controllers"
 	"github.com/garyburd/redigo/redis"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"

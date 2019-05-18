@@ -2,7 +2,7 @@ package models
 
 import (
 	"fmt"
-	"saas/libs/config"
+	"saas/go-saas/libs/config"
 	"github.com/jinzhu/gorm"
 	_"github.com/jinzhu/gorm/dialects/mysql"
 )
@@ -28,9 +28,11 @@ func Init(){
 	var err error
 	c := config.Get().Database
 
-	db,err = gorm.Open("mysql",fmt.Sprintf("%s:%s@/%s?charset=%s&parseTime=True&loc=Local",
+	db,err = gorm.Open("mysql",fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=%s&parseTime=True&loc=Local",
 		c.Username,
 		c.Password,
+		c.Server,
+		c.Port,
 		c.Dbname,
 		c.Charset,
 	))

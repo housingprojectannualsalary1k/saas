@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"saas/controllers"
-	"saas/libs/middleware"
+	"saas/go-saas/controllers"
+	"saas/go-saas/libs/middleware"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/redis"
 	"github.com/gin-gonic/gin"

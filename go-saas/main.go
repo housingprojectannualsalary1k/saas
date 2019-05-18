@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"saas/libs/config"
-	"saas/models"
+	"saas/go-saas/libs/config"
+	"saas/go-saas/models"
 )
 
 var (
