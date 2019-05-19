@@ -18,6 +18,12 @@ type OffLineStoreModel struct {
 	Status		int			`gorm:"type:tinyint(3); NOT NULL;" json:"status"`
 }
 
+
+func (this *OffLineStoreModel) TableName() string{
+	return "OfflineStore"
+}
+
+
 func NewOffLineStoreModel() *OffLineStoreModel{
 	o := OffLineStoreModel{}
 	return &o

@@ -1,6 +1,6 @@
 [database]
-server = "119.23.255.12"
-port = 3506
+server = "127.0.0.1"
+port = 3306
 dbname = "saas"
 username = "root"
 password = "root"

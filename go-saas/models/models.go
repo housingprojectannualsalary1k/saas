@@ -22,6 +22,19 @@ type CommonModel struct {
 }
 
 func CreateTables(){
+	db.AutoMigrate(&CashbackModel{})
+	db.AutoMigrate(&CourseModel{})
+	db.AutoMigrate(&CustomerModel{})
+	db.AutoMigrate(&InformatimeModel{})
+	db.AutoMigrate(&MaintenanceModel{})
+	db.AutoMigrate(&NodeModel{})
+	db.AutoMigrate(&OffLineStoreModel{})
+	db.AutoMigrate(&ProductModel{})
+	db.AutoMigrate(&RoleModel{})
+	db.AutoMigrate(&RecordsModel{})
+	db.AutoMigrate(&SinformationModel{})
+	db.AutoMigrate(&TechnicianModel{})
+	db.AutoMigrate(&ZsettingModel{})
 }
 
 func Init(){
