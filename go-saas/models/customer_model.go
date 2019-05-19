@@ -17,8 +17,8 @@ type (
 	AtrWeight		string		`gorm:"type:varchar(50);" json:"atr_weight" form:"atr_weight"`	//美学体重（斤）
 	StandardWeight	string		`gorm:"type:varchar(50);" json:"standard_weight" form:"standard_weight"`	//标准体重（斤）
 	StarTime		string		`gorm:"type:datetime;" json:"star_time" form:"star_time"`		//开始减重时间
-	VestInShop		string		`gorm:"type:varchar(50);" json:"vest_in_shop" form:"vest_in_shop"`	//归属门店
-	ServerInShop	string		`gorm:"type:varchar(50);" json:"server_in_shop" form:"server_in_shop"`	//服务门店
+	VestInShop		int			`gorm:"type:int(10);" json:"vest_in_shop" form:"vest_in_shop"`	//归属门店id
+	ServerInShop	int			`gorm:"type:int(10);" json:"server_in_shop" form:"server_in_shop"`	//服务门店id
 	AccountNumber	string		`gorm:"type:varchar(50);" json:"account_number" form:"account_number"`	//卡面账号
 	Pid				int			`gorm:"type:int(10);" json:"pid" form:"pid"`		//	推荐人id
 	Comments		string		`gorm:"type:varchar(50);" json:"comments" form:"comments"`	//备注

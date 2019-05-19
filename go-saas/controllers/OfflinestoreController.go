@@ -14,5 +14,5 @@ func NewOffLineStoreController() *OffLineStoreController{
 }
 
 func (this *OffLineStoreController) View(ctx *gin.Context){
-	this.Response("你好啊")
+	this.Response("门店管理")
 }
