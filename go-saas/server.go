@@ -36,7 +36,10 @@ func ResgiterRoute(){
 	{
 		c := controllers.NewCustomerController()
 		customer.GET("/view", c.View)
+		customer.GET("/view/:id", c.Find)
 		customer.POST("/create", c.Create)
+		customer.GET("/delete/:id", c.Delete)
+		customer.POST("/update", c.Update)
 	}
 	//区域
 	zsetting := route.Group("/zsetting")
@@ -68,17 +71,16 @@ func ResgiterRoute(){
 		c := controllers.NewOffLineStoreController()
 		records.GET("/view", c.View)
 	}
-	//客户管理
-	customer := route.Group("/customer")
-	{
-		c := controllers.NewOffLineStoreController()
-		customer.GET("/view", c.View)
-	}
+
 	//疗程记录
 	course := route.Group("/course")
 	{
-		c := controllers.NewOffLineStoreController()
+		c := controllers.NewCourseController()
 		course.GET("/view", c.View)
+		course.GET("/view/:id", c.Find)
+		course.POST("/create", c.Create)
+		course.GET("/delete/:id", c.Delete)
+		course.POST("/update", c.Update)
 	}
 	//维护记录
 	maintenance := route.Group("/maintenance")
