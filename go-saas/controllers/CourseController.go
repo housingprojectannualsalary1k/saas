@@ -2,9 +2,12 @@ package controllers
 
 import (
 	"github.com/gin-gonic/gin"
+<<<<<<< HEAD
 	"github.com/pkg/errors"
 	"saas/go-saas/models"
 	"strconv"
+=======
+>>>>>>> 09792f842f529e7004990697e71cb49f928bdb33
 )
 
 type CourseController struct {
@@ -16,6 +19,7 @@ func NewCourseController() *CourseController{
 	return &o
 }
 
+<<<<<<< HEAD
 //客户管理列表
 func (this *CourseController) View(ctx *gin.Context){
 	//调用查询方法
@@ -115,4 +119,8 @@ func (this *CourseController) Delete(ctx *gin.Context){
 	}
 
 	this.Response(ID)
+=======
+func (this *CourseController) View(ctx *gin.Context){
+	this.Response("聊城记录")
+>>>>>>> 09792f842f529e7004990697e71cb49f928bdb33
 }

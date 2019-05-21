@@ -56,22 +56,31 @@ func ResgiterRoute(){
 	//技师管理
 	technician := route.Group("/technician")
 	{
-		c := controllers.NewOffLineStoreController()
+		c := controllers.NewTechnicianController()
 		technician.GET("/view", c.View)
 	}
 	//门店订单管理
 	sinformation := route.Group("/sinformation")
 	{
-		c := controllers.NewOffLineStoreController()
+		c := controllers.NewSinformationController()
 		sinformation.GET("/view", c.View)
 	}
 	//到店记录
 	records := route.Group("/records")
 	{
-		c := controllers.NewOffLineStoreController()
+		c := controllers.NewRecordsController()
 		records.GET("/view", c.View)
 	}
+<<<<<<< HEAD
 
+=======
+	//客户管理
+	customer := route.Group("/customer")
+	{
+		c := controllers.NewCustomerController()
+		customer.GET("/view", c.View)
+	}
+>>>>>>> 09792f842f529e7004990697e71cb49f928bdb33
 	//疗程记录
 	course := route.Group("/course")
 	{
@@ -85,31 +94,31 @@ func ResgiterRoute(){
 	//维护记录
 	maintenance := route.Group("/maintenance")
 	{
-		c := controllers.NewOffLineStoreController()
+		c := controllers.NewMaintenanceController()
 		maintenance.GET("/view", c.View)
 	}
 	//返现客户
 	cashback := route.Group("/cashback")
 	{
-		c := controllers.NewOffLineStoreController()
+		c := controllers.NewCashbackController()
 		cashback.GET("/view", c.View)
 	}
 	//全部串店信息
 	informatime := route.Group("/informatime")
 	{
-		c := controllers.NewOffLineStoreController()
+		c := controllers.NewInformatimeController()
 		informatime.GET("/view", c.View)
 	}
 	//权限
 	node := route.Group("/node")
 	{
-		c := controllers.NewOffLineStoreController()
+		c := controllers.NewNodeController()
 		node.GET("/view", c.View)
 	}
 	//部门管理
 	role := route.Group("/role")
 	{
-		c := controllers.NewOffLineStoreController()
+		c := controllers.NewRoleController()
 		role.GET("/view", c.View)
 	}
 

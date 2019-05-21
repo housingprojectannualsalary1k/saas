@@ -2,9 +2,12 @@ package controllers
 
 import (
 	"github.com/gin-gonic/gin"
+<<<<<<< HEAD
 	"github.com/pkg/errors"
 	"saas/go-saas/models"
 	"strconv"
+=======
+>>>>>>> 09792f842f529e7004990697e71cb49f928bdb33
 )
 
 type CustomerController struct {
@@ -16,6 +19,7 @@ func NewCustomerController() *CustomerController{
 	return &o
 }
 
+<<<<<<< HEAD
 //客户管理列表
 func (this *CustomerController) View(ctx *gin.Context){
 	//搜索条件
@@ -129,4 +133,8 @@ func (this *CustomerController) Delete(ctx *gin.Context){
 	}
 
 	this.Response(ID)
+=======
+func (this *CustomerController) View(ctx *gin.Context){
+	this.Response("客户管理")
+>>>>>>> 09792f842f529e7004990697e71cb49f928bdb33
 }
